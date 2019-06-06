@@ -96,15 +96,16 @@ def predict(x):
     #print("Recommended Books to this user are :- ")
 
     w=(recommend_books(int(x),4))#here we need to give the user_id as input
-
+    
     f=""
     table=dynamodb.Table('hungrymind-mobilehub-593518188-Books')
     for i in w:
-        response = table.query(
+        '''response = table.query(
         KeyConditionExpression=Key('ISBN').eq(i[0])
         )
-        if(len(response['Items'])>0):
-            f+=(response['Items'][0]['BookName'])+" <br>"
+        if(len(response['Items'])>0):'''
+        f+=str(i[0])+" <br>"
+    
     return f
 
 if __name__ == '__main__':
