@@ -12,7 +12,7 @@ import os
 os.environ["NO_PROXY"] = "s3.amazonaws.com"
 
 dynamodb=boto3.resource('dynamodb')
-table=dynamodb.Table('hungrymind-mobilehub-593518188-BookBorrow')
+table=dynamodb.Table('hungrymind-mobilehub-593518188-Book_Borrow')
 data=table.scan()
 print("finished scan")
 
