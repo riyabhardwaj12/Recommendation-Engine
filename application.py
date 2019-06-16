@@ -13,8 +13,8 @@ import os
 os.environ["NO_PROXY"] = "s3.amazonaws.com"
 
 dynamodb=boto3.resource('dynamodb',
-                        aws_access_key_id='AKIAXMWX5S7RDLMJQHO4',
-    aws_secret_access_key='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',
+                        aws_access_key_id='....................',
+    aws_secret_access_key='.......................................',
                         region_name='us-east-1')
 
 
